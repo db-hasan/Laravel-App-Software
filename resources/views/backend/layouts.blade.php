@@ -44,9 +44,22 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ route('profle.update') }}">
-                    <i class="bi bi-person"></i>
+                <a class="nav-link collapsed" href="{{ route('role.index') }}">
+                    <i class="bi bi-shield-lock"></i>
+                    <span>Permission</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{{ route('user.index') }}">
+                    <i class="bi bi-people"></i>
                     <span>User's</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{{ route('profle.update') }}">
+                    <i class="bi bi-database-lock"></i>
+                    <span>Password</span>
                 </a>
             </li>
 
