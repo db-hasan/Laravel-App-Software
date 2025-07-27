@@ -93,4 +93,23 @@
             </form>
         </div>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            function generatePasswordSuggestion(input, length) {
+                var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+{}:<>?";
+                var suggestion = input; // Start with the current input
+                for (var i = input.length, n = charset.length; i < length; ++i) {
+                    suggestion += charset.charAt(Math.floor(Math.random() * n));
+                }
+                return suggestion;
+            }
+    
+            $('#new_password').on('input', function() {
+                var inputValue = $(this).val();
+                var suggestedPassword = generatePasswordSuggestion(inputValue, 12); // Generate a 12-character suggestion
+                $('#password_suggestion').text(suggestedPassword);
+            });
+        });
+    </script>
 @endsection

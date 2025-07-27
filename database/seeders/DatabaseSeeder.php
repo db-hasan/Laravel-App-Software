@@ -43,6 +43,7 @@ class DatabaseSeeder extends Seeder
             RoleModel::create(['name' => $roleModel]);
         };
 
+
         // User Create
          $user = User::create([
             'name' => 'Super Admin',
